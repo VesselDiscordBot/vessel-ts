@@ -1,0 +1,16 @@
+{
+	"extends": "@sapphire/ts-config",
+	"compilerOptions": {
+		"rootDir": "src",
+		"outDir": "dist",
+		"baseUrl": ".",
+		"tsBuildInfoFile": "dist/.tsbuildinfo",
+		"paths": {
+			"#lib/utils": ["src/lib/utils"],
+			"#lib/constants": ["src/lib/constants"],
+			"#lib/structures": ["src/lib/structures/index.ts"],
+			"#lib/interfaces": ["src/lib/interfaces/index.ts"],
+		}
+	},
+	"include": ["src"],
+}

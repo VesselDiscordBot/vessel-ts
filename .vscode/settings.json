@@ -1,0 +1,4 @@
+{
+    "discord.enabled": false,
+    "prettier.prettierPath": "./node_modules/prettier"
+}

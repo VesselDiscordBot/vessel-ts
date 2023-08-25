@@ -1,0 +1,21 @@
+version: '3.3'
+volumes:
+  db_data:
+    name: db_data
+
+networks:
+  vessel:
+
+
+services:
+  postgres:
+    container_name: postgres
+    ports:
+      - 127.0.0.1:5432:5432
+    networks:
+      - vessel
+    environment:
+      - POSTGRES_PASSWORD=mysecretpassword
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    image: postgres:15.4
