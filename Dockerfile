@@ -21,10 +21,10 @@ FROM base AS build
 RUN --mount=type=cache,id=pnpm,target=/pnpm/store pnpm install --frozen-lockfile
 
 # Generate prisma client
-RUN npx prisma generate#
+RUN [ "npx", "prisma", "generate" ]
 
 # Build the app
-RUN pnpm run build
+RUN [ "pnpm", "run", "build" ]
 
 FROM base
 # Copy production dependencies and build
